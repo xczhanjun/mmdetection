@@ -1,7 +1,6 @@
-import warnings
-
 import torch.nn as nn
 import torch.nn.functional as F
+import warnings
 from mmcv.cnn import ConvModule, xavier_init
 from mmcv.runner import auto_fp16
 

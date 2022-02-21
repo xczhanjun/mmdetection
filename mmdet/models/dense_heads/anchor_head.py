@@ -659,6 +659,7 @@ class AnchorHead(BaseDenseHead, BBoxTestMixin):
             if nms_pre_tensor > 0 and (torch.onnx.is_in_onnx_export()
                                        or scores.shape[-2] > nms_pre_tensor):
                 from torch import _shape_as_tensor
+
                 # keep shape as tensor and get k
                 num_anchor = _shape_as_tensor(scores)[-2].to(
                     nms_pre_tensor.device)

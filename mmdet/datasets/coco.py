@@ -1,12 +1,11 @@
 import itertools
 import logging
-import os.path as osp
-import tempfile
-from collections import OrderedDict
-
 import mmcv
 import numpy as np
+import os.path as osp
 import pycocotools
+import tempfile
+from collections import OrderedDict
 from mmcv.utils import print_log
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval

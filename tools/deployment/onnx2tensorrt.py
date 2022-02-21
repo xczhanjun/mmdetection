@@ -1,10 +1,9 @@
 import argparse
-import os
-import os.path as osp
-
 import numpy as np
 import onnx
 import onnxruntime as ort
+import os
+import os.path as osp
 import torch
 from mmcv.ops import get_onnxruntime_op_path
 from mmcv.tensorrt import (TRTWraper, is_tensorrt_plugin_loaded, onnx2trt,

@@ -1,6 +1,5 @@
 import argparse
 import time
-
 import torch
 from mmcv import Config, DictAction
 from mmcv.cnn import fuse_conv_bn

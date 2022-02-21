@@ -11,10 +11,9 @@ some instructions
 
 import argparse
 import json
+import mmcv
 import os
 import subprocess
-
-import mmcv
 import torch
 from mmcv import Config, get_logger
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel

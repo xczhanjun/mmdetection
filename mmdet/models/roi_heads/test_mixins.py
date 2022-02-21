@@ -1,6 +1,5 @@
 import logging
 import sys
-
 import torch
 
 from mmdet.core import (bbox2roi, bbox_mapping, merge_aug_bboxes,

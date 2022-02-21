@@ -1,6 +1,5 @@
-from abc import ABCMeta, abstractmethod
-
 import torch.nn as nn
+from abc import ABCMeta, abstractmethod
 
 from ..builder import build_shared_head
 

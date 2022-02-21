@@ -1,11 +1,10 @@
 import argparse
 import glob
 import json
+import mmcv
 import os.path as osp
 import shutil
 import subprocess
-
-import mmcv
 import torch
 
 
