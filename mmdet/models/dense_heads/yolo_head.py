@@ -1,10 +1,9 @@
 # Copyright (c) 2019 Western Digital Corporation or its affiliates.
 
-import warnings
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import warnings
 from mmcv.cnn import ConvModule, normal_init
 from mmcv.runner import force_fp32
 
@@ -283,6 +282,7 @@ class YOLOV3Head(BaseDenseHead, BBoxTestMixin):
             if nms_pre_tensor > 0 and (torch.onnx.is_in_onnx_export()
                                        or conf_pred.shape[1] > nms_pre_tensor):
                 from torch import _shape_as_tensor
+
                 # keep shape as tensor and get k
                 num_anchor = _shape_as_tensor(conf_pred)[1].to(device)
                 nms_pre = torch.where(nms_pre_tensor < num_anchor,

@@ -1,11 +1,10 @@
 import argparse
-import os.path as osp
-import warnings
-
 import numpy as np
 import onnx
 import onnxruntime as rt
+import os.path as osp
 import torch
+import warnings
 from mmcv import DictAction
 
 from mmdet.core import (build_model_from_cfg, generate_inputs_and_wrap_model,
@@ -60,8 +59,9 @@ def pytorch2onnx(config_path,
 
     # simplify onnx model
     if do_simplify:
-        from mmdet import digit_version
         import mmcv
+
+        from mmdet import digit_version
 
         min_required_version = '1.2.5'
         assert digit_version(mmcv.__version__) >= digit_version(
@@ -73,8 +73,8 @@ def pytorch2onnx(config_path,
         _ = simplify(output_file, [input_dic], output_file)
     print(f'Successfully exported ONNX model: {output_file}')
     if verify:
-        from mmdet.core import get_classes, bbox2result
         from mmdet.apis import show_result_pyplot
+        from mmdet.core import bbox2result, get_classes
 
         ort_custom_op_path = ''
         try:

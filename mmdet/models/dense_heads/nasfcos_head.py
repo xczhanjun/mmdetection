@@ -1,5 +1,4 @@
 import copy
-
 import torch.nn as nn
 from mmcv.cnn import (ConvModule, Scale, bias_init_with_prob,
                       caffe2_xavier_init, normal_init)

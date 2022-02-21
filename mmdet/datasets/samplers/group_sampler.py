@@ -1,6 +1,6 @@
 from __future__ import division
-import math
 
+import math
 import numpy as np
 import torch
 from mmcv.runner import get_dist_info

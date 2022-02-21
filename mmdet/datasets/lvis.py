@@ -1,10 +1,9 @@
 import itertools
 import logging
+import numpy as np
 import os.path as osp
 import tempfile
 from collections import OrderedDict
-
-import numpy as np
 from mmcv.utils import print_log
 from terminaltables import AsciiTable
 
@@ -338,7 +337,7 @@ class LVISV05Dataset(CocoDataset):
         try:
             import lvis
             assert lvis.__version__ >= '10.5.3'
-            from lvis import LVISResults, LVISEval
+            from lvis import LVISEval, LVISResults
         except AssertionError:
             raise AssertionError('Incompatible version of lvis is installed. '
                                  'Run pip uninstall lvis first. Then run pip '

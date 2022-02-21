@@ -21,6 +21,7 @@ def test_standard_anchor_generator():
 
 def test_strides():
     from mmdet.core import AnchorGenerator
+
     # Square strides
     self = AnchorGenerator([10], [1.], [1.], [10])
     anchors = self.grid_anchors([(2, 2)], device='cpu')

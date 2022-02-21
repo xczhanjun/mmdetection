@@ -1,7 +1,6 @@
-from unittest.mock import patch
-
 import pytest
 import torch
+from unittest.mock import patch
 
 from mmdet.models.utils import (FFN, MultiheadAttention, Transformer,
                                 TransformerDecoder, TransformerDecoderLayer,

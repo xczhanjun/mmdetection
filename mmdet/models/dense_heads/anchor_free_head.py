@@ -1,7 +1,6 @@
-from abc import abstractmethod
-
 import torch
 import torch.nn as nn
+from abc import abstractmethod
 from mmcv.cnn import ConvModule, bias_init_with_prob, normal_init
 from mmcv.runner import force_fp32
 
